@@ -1,4 +1,5 @@
 /vendor
 /output/*
-!/output/index.html
+!/output/empty.html
 /html
+/.idea

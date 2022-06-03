@@ -12,7 +12,9 @@ services:
     networks:
       - backend
   php:
-    image: php:8.1-fpm
+    container_name: tulia-docs_php
+    build:
+      context: ./docker/web
     volumes:
       - ./:/var/www
     networks:

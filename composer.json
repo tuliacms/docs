@@ -6,7 +6,7 @@
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "SymfonyDocsBuilder\\": "src"
+            "Tulia\\Docs\\": "src"
         }
     },
     "require": {
@@ -26,5 +26,8 @@
     },
     "config": {
         "disable-tls": false
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^6.1"
     }
 }

@@ -2,7 +2,7 @@ build:
 	docker-compose build --no-cache --build-arg USER_ID=1000 --build-arg GROUP_ID=1000
 
 up:
-	docker-compose up -d --no-build && echo 'Docs are available after compiling on http://localhost:40402/'
+	docker-compose up -d --no-build && echo 'Docs are available on http://localhost:40402/'
 
 down:
 	docker-compose stop
@@ -11,12 +11,12 @@ restart:
 	docker-compose restart
 
 install:
-	docker exec -it tulia_docs_www --work-dir="/var/www" "composer -v"
+	docker exec -it --user "$(id -u):$(id -g)" --workdir="/var/www" tulia-docs_php php composer.phar install
 
 bash:
-	docker exec -it --user "$(id -u):$(id -g)" tulia_docs_www /bin/bash
+	docker exec -it --user "$(id -u):$(id -g)" --workdir="/var/www" tulia-docs_php /bin/bash
 
-compile:
-
+generate:
+	docker exec -it --user "$(id -u):$(id -g)" --workdir="/var/www" tulia-docs_php php generate.php
 
 .SILENT:
