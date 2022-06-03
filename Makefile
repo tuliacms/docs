@@ -2,7 +2,7 @@ build:
 	docker-compose build --no-cache --build-arg USER_ID=1000 --build-arg GROUP_ID=1000
 
 up:
-	docker-compose up -d --no-build && echo 'Docs are available on http://localhost:40402/'
+	docker-compose up -d --no-build && echo 'Docs are available on http://localhost:40404/'
 
 down:
 	docker-compose stop
