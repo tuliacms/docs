@@ -19,6 +19,11 @@ RUN apt-get install -y zlib1g-dev libzip-dev
 RUN docker-php-ext-configure zip
 RUN docker-php-ext-install zip
 
+# Installing INTL
+RUN apt-get install -y zlib1g-dev libicu-dev g++
+RUN docker-php-ext-configure intl
+RUN docker-php-ext-install intl
+
 # Allow access to root dir
 RUN chown -R www-data:www-data /var/www
 

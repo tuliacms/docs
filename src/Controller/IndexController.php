@@ -6,6 +6,7 @@ namespace Tulia\Docs\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Finder\Finder;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
@@ -29,5 +30,10 @@ final class IndexController extends AbstractController
         }
 
         return $this->render('homepage.html.twig');
+    }
+
+    public function localeRedirect(): RedirectResponse
+    {
+        return $this->redirectToRoute('homepage.localized', ['_locale' => 'en']);
     }
 }

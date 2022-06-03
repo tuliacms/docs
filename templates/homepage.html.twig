@@ -1,9 +1,10 @@
 {% extends 'base.html.twig' %}
+{% trans_default_domain 'homepage' %}
 
 {% block content %}
     <div class="container-xxl">
         <div class="row">
-            <h1>Tulia CMS Documentation</h1>
+            <h1>{{ 'tuliaCmsDocumentation'|trans }}</h1>
         </div>
         <div class="row g-4 py-5 row-cols-1 row-cols-lg-4">
             <div class="col d-flex align-items-start">
@@ -11,9 +12,8 @@
                     <i class="fa-solid fa-book-open"></i>
                 </div>
                 <div>
-                    <h2>Getting started</h2>
-                    <a href="">Installation</a><br />
-                    <a href="">Setup</a><br />
+                    <h2>{{ 'gettingStarted'|trans }}</h2>
+                    <a href="" class="homepage-link">Installation</a>
                 </div>
             </div>
             <div class="col d-flex align-items-start">
@@ -21,9 +21,9 @@
                     <i class="fa-solid fa-layer-group"></i>
                 </div>
                 <div>
-                    <h2>Architecture</h2>
-                    <a href="">Content Types</a><br />
-                    <a href="">Nodes</a><br />
+                    <h2>{{ 'architecture'|trans }}</h2>
+                    <a href="" class="homepage-link">Content Types</a>
+                    <a href="" class="homepage-link">Nodes</a>
                 </div>
             </div>
             <div class="col d-flex align-items-start">
@@ -31,7 +31,7 @@
                     <i class="fa-solid fa-book"></i>
                 </div>
                 <div>
-                    <h2>The Basics</h2>
+                    <h2>{{ 'theBasics'|trans }}</h2>
                 </div>
             </div>
             <div class="col d-flex align-items-start">
@@ -39,27 +39,26 @@
                     <i class="fa-solid fa-panorama"></i>
                 </div>
                 <div>
-                    <h2>Frontend</h2>
+                    <h2>{{ 'frontend'|trans }}</h2>
+                    <a href="" class="homepage-link">Themes</a>
+                    <a href="" class="homepage-link">Assets</a>
                 </div>
             </div>
         </div>
     </div>
 
     <style>
-        .icon-link > .bi {
-            margin-top: .125rem;
-            margin-left: .125rem;
-            fill: currentcolor;
-            transition: transform .25s ease-in-out;
-        }
-        .icon-link:hover > .bi {
-            transform: translate(.25rem);
-        }
-
         .icon-square {
             width: 3rem;
             height: 3rem;
             border-radius: .75rem;
+        }
+
+        .homepage-link {
+            font-size: 18px;
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
         }
     </style>
 {% endblock %}

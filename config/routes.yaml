@@ -1,3 +1,9 @@
 homepage:
     path: /
+    controller: Tulia\Docs\Controller\IndexController::localeRedirect
+
+homepage.localized:
+    path: /{_locale}/
     controller: Tulia\Docs\Controller\IndexController::index
+    requirements:
+        _locale: en|pl

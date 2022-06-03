@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="en" datatype="plaintext" original="homepage+intl-icu.en.xlf">
+        <body>
+            <trans-unit id="homepage.1">
+                <source>tuliaCmsDocumentation</source>
+                <target>Tulia CMS Documentation</target>
+            </trans-unit>
+            <trans-unit id="homepage.2">
+                <source>gettingStarted</source>
+                <target>Getting started</target>
+            </trans-unit>
+            <trans-unit id="homepage.3">
+                <source>architecture</source>
+                <target>Architecture</target>
+            </trans-unit>
+            <trans-unit id="homepage.4">
+                <source>theBasics</source>
+                <target>The Basics</target>
+            </trans-unit>
+            <trans-unit id="homepage.5">
+                <source>frontend</source>
+                <target>Frontend</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
