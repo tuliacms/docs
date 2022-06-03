@@ -11,12 +11,12 @@ restart:
 	docker-compose restart
 
 install:
-	docker exec -it --user "$(id -u):$(id -g)" --workdir="/var/www" tulia-docs_php php composer.phar install
+	docker exec -it --user "$(id -u):$(id -g)" --workdir="/var/www" tulia-docs_php composer install
 
 bash:
 	docker exec -it --user "$(id -u):$(id -g)" --workdir="/var/www" tulia-docs_php /bin/bash
 
 generate:
-	docker exec -it --user "$(id -u):$(id -g)" --workdir="/var/www" tulia-docs_php php generate.php
+	docker exec -it --user "$(id -u):$(id -g)" --workdir="/var/www" tulia-docs_php php bin/console docs:generate
 
 .SILENT:
