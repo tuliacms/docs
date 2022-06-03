@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div class="container-xxl">
+        <div class="row">
+            <h1>Tulia CMS Documentation</h1>
+        </div>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-4">
+            <div class="col d-flex align-items-start">
+                <div class="icon-square bg-light text-dark d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+                <div>
+                    <h2>Getting started</h2>
+                    <a href="">Installation</a><br />
+                    <a href="">Setup</a><br />
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <div class="icon-square bg-light text-dark d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                    <i class="fa-solid fa-layer-group"></i>
+                </div>
+                <div>
+                    <h2>Architecture</h2>
+                    <a href="">Content Types</a><br />
+                    <a href="">Nodes</a><br />
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <div class="icon-square bg-light text-dark d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                    <i class="fa-solid fa-book"></i>
+                </div>
+                <div>
+                    <h2>The Basics</h2>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <div class="icon-square bg-light text-dark d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                    <i class="fa-solid fa-panorama"></i>
+                </div>
+                <div>
+                    <h2>Frontend</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .icon-link > .bi {
+            margin-top: .125rem;
+            margin-left: .125rem;
+            fill: currentcolor;
+            transition: transform .25s ease-in-out;
+        }
+        .icon-link:hover > .bi {
+            transform: translate(.25rem);
+        }
+
+        .icon-square {
+            width: 3rem;
+            height: 3rem;
+            border-radius: .75rem;
+        }
+    </style>
+{% endblock %}

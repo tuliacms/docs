@@ -13,6 +13,7 @@
         "ext-json": "*",
         "doctrine/rst-parser": "^0.5.2",
         "scrivo/highlight.php": "v9.18.1.9",
+        "symfony/asset": "6.1.*",
         "symfony/console": "6.1.*",
         "symfony/css-selector": "6.1.*",
         "symfony/dom-crawler": "6.1.*",
