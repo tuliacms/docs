@@ -1,0 +1,30 @@
+{
+    "name": "tuliacms/docs",
+    "description": "Technical documentation of TuliaCMS",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "SymfonyDocsBuilder\\": "src"
+        }
+    },
+    "require": {
+        "php": ">=7.4",
+        "ext-json": "*",
+        "ext-curl": "*",
+        "doctrine/rst-parser": "^0.5",
+        "scrivo/highlight.php": "^9.12.0",
+        "symfony/process": "^5.2 || ^6.0",
+        "symfony/filesystem": "^5.2 || ^6.0",
+        "symfony/finder": "^5.2 || ^6.0",
+        "symfony/dom-crawler": "^5.2 || ^6.0",
+        "symfony/css-selector": "^5.2 || ^6.0",
+        "symfony/console": "^5.2 || ^6.0",
+        "symfony/http-client": "^5.2 || ^6.0",
+        "twig/twig": "^2.14 || ^3.3"
+    },
+    "config": {
+        "disable-tls": false
+    }
+}

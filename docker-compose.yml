@@ -1,0 +1,21 @@
+version: "3.1"
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "40404:80"
+    volumes:
+      - ./:/var/www
+      - ./docker/web/site.conf:/etc/nginx/conf.d/default.conf
+    links:
+      - php
+    networks:
+      - backend
+  php:
+    image: php:8.1-fpm
+    volumes:
+      - ./:/var/www
+    networks:
+      - backend
+networks:
+  backend:
