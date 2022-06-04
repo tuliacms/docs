@@ -6,7 +6,7 @@ Podstawy systemu||fa-solid fa-book
 
 Architektura||fa-solid fa-layer-group
     architektura/typy-tresci||Typy treści
-    architektura/nodes Nodes||(węzły treści)
+    architektura/nodes|| Nodes(węzły treści)
 
 Frontend||fa-solid fa-panorama
     frontend/szablony||Szablony

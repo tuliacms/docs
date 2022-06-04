@@ -6,30 +6,6 @@
                 <source>tuliaCmsDocumentation</source>
                 <target>Tulia CMS Documentation</target>
             </trans-unit>
-            <trans-unit id="homepage.2">
-                <source>gettingStarted</source>
-                <target>Getting started</target>
-            </trans-unit>
-            <trans-unit id="homepage.3">
-                <source>architecture</source>
-                <target>Architecture</target>
-            </trans-unit>
-            <trans-unit id="homepage.4">
-                <source>theBasics</source>
-                <target>The Basics</target>
-            </trans-unit>
-            <trans-unit id="homepage.5">
-                <source>frontend</source>
-                <target>Frontend</target>
-            </trans-unit>
-            <trans-unit id="homepage.6">
-                <source>tuliaEditor</source>
-                <target>Tulia Editor</target>
-            </trans-unit>
-            <trans-unit id="homepage.7">
-                <source>production</source>
-                <target>Production</target>
-            </trans-unit>
         </body>
     </file>
 </xliff>

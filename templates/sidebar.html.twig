@@ -1,0 +1,15 @@
+<div class="h2 my-5"></div>
+<div class="list-group list-group-flush">
+    {% for section in toc %}
+        <div class="list-group-item list-group-item-action" aria-current="true" style="font-weight: bold;border-bottom:none;">
+            <i class="{{ section.icon }} me-2"></i>
+            {{ section.headline }}
+        </div>
+        <div class="list-group mb-3">
+            {% for link, label in section.links %}
+                <a style="padding-left: 15px;" href="{{ path('page', { page: 'current/' ~ link }) }}" class="list-group-item list-group-item-action" title="{{ label }}">{{ label }}</a>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>
+<div class="mb-5"></div>

@@ -5,9 +5,9 @@
     <div class="row">
         <h1>{{ 'tuliaCmsDocumentation'|trans }}</h1>
     </div>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-4">
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
         {% for section in toc %}
-            <div class="col d-flex align-items-start">
+            <div class="col d-flex align-items-start mb-5">
                 <div class="icon-square bg-light text-dark d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
                     <i class="{{ section.icon }}"></i>
                 </div>
@@ -19,65 +19,6 @@
                 </div>
             </div>
         {% endfor %}
-        {#<div class="col d-flex align-items-start">
-            <div class="icon-square bg-light text-dark d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-                <i class="fa-solid fa-book-open"></i>
-            </div>
-            <div>
-                <h2>{{ 'gettingStarted'|trans }}</h2>
-                <a href="{{ path('page', { page: 'current/getting-started/installation' }) }}" class="homepage-link">Installation</a>
-                <a href="{{ path('page', { page: 'current/getting-started/multiple-instances' }) }}" class="homepage-link">Multiple instances</a>
-            </div>
-        </div>
-        <div class="col d-flex align-items-start">
-            <div class="icon-square bg-light text-dark d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-                <i class="fa-solid fa-book"></i>
-            </div>
-            <div>
-                <h2>{{ 'theBasics'|trans }}</h2>
-            </div>
-        </div>
-        <div class="col d-flex align-items-start">
-            <div class="icon-square bg-light text-dark d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-                <i class="fa-solid fa-layer-group"></i>
-            </div>
-            <div>
-                <h2>{{ 'architecture'|trans }}</h2>
-                <a href="" class="homepage-link">Content Types</a>
-                <a href="" class="homepage-link">Nodes</a>
-            </div>
-        </div>
-        <div class="col d-flex align-items-start">
-            <div class="icon-square bg-light text-dark d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-                <i class="fa-solid fa-panorama"></i>
-            </div>
-            <div>
-                <h2>{{ 'frontend'|trans }}</h2>
-                <a href="" class="homepage-link">Themes</a>
-                <a href="" class="homepage-link">Assets</a>
-            </div>
-        </div>
-        <div class="col d-flex align-items-start">
-            <div class="icon-square bg-light text-dark d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-                <i class="fa-solid fa-brush"></i>
-            </div>
-            <div>
-                <h2>{{ 'tuliaEditor'|trans }}</h2>
-                <a href="" class="homepage-link">Basics</a>
-                <a href="" class="homepage-link">Blocks</a>
-                <a href="" class="homepage-link">Extensions</a>
-            </div>
-        </div>
-        <div class="col d-flex align-items-start">
-            <div class="icon-square bg-light text-dark d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-                <i class="fa-solid fa-cloud"></i>
-            </div>
-            <div>
-                <h2>{{ 'production'|trans }}</h2>
-                <a href="" class="homepage-link">Deployment</a>
-                <a href="" class="homepage-link">Performance</a>
-            </div>
-        </div>#}
     </div>
 
     <style>

@@ -6,30 +6,6 @@
                 <source>tuliaCmsDocumentation</source>
                 <target>Dokumentacja Techniczna Tulia CMS</target>
             </trans-unit>
-            <trans-unit id="homepage.2">
-                <source>gettingStarted</source>
-                <target>Getting started</target>
-            </trans-unit>
-            <trans-unit id="homepage.3">
-                <source>architecture</source>
-                <target>Architektura</target>
-            </trans-unit>
-            <trans-unit id="homepage.4">
-                <source>theBasics</source>
-                <target>Podstawy systemu</target>
-            </trans-unit>
-            <trans-unit id="homepage.5">
-                <source>frontend</source>
-                <target>Frontend</target>
-            </trans-unit>
-            <trans-unit id="homepage.6">
-                <source>tuliaEditor</source>
-                <target>Tulia Editor</target>
-            </trans-unit>
-            <trans-unit id="homepage.7">
-                <source>production</source>
-                <target>Na produkcji</target>
-            </trans-unit>
         </body>
     </file>
 </xliff>

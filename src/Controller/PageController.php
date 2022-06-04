@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Tulia\Docs\Service\TOCParser;
 
 /**
  * @author Adam Banaszkiewicz
@@ -15,7 +16,8 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 final class PageController extends AbstractController
 {
     public function __construct(
-        private string $docOutputDir
+        private string $docOutputDir,
+        private TOCParser $parser
     ) {
     }
 
@@ -28,7 +30,10 @@ final class PageController extends AbstractController
         }
 
         return $this->render('page.html.twig', [
-            'page' => file_get_contents($pagepath)
+            'page' => file_get_contents($pagepath),
+            'toc' => $this->parser->parseFile(
+                $request->attributes->get('_locale')
+            ),
         ]);
     }
 }
