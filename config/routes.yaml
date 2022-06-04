@@ -7,3 +7,10 @@ homepage.localized:
     controller: Tulia\Docs\Controller\IndexController::index
     requirements:
         _locale: en|pl
+
+page:
+    path: /{_locale}/doc/{page}
+    controller: Tulia\Docs\Controller\PageController::page
+    requirements:
+        _locale: en|pl
+        page: '.*'

@@ -13,7 +13,7 @@
                 </div>
                 <div>
                     <h2>{{ 'gettingStarted'|trans }}</h2>
-                    <a href="" class="homepage-link">Installation</a>
+                    <a href="{{ path('page', { page: 'current/installation' }) }}" class="homepage-link">Installation</a>
                 </div>
             </div>
             <div class="col d-flex align-items-start">
@@ -42,6 +42,17 @@
                     <h2>{{ 'frontend'|trans }}</h2>
                     <a href="" class="homepage-link">Themes</a>
                     <a href="" class="homepage-link">Assets</a>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <div class="icon-square bg-light text-dark d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                    <i class="fa-solid fa-brush"></i>
+                </div>
+                <div>
+                    <h2>{{ 'tuliaEditor'|trans }}</h2>
+                    <a href="" class="homepage-link">Basics</a>
+                    <a href="" class="homepage-link">Blocks</a>
+                    <a href="" class="homepage-link">Extensions</a>
                 </div>
             </div>
         </div>

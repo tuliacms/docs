@@ -23,6 +23,9 @@
     "scrivo/highlight.php": {
         "version": "v9.18.1.9"
     },
+    "spatie/file-system-watcher": {
+        "version": "1.1.0"
+    },
     "symfony/asset": {
         "version": "v6.1.0"
     },

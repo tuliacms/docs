@@ -1,2 +1,2 @@
-Some heading
+Installation
 ============
