@@ -22,6 +22,14 @@
                 <source>frontend</source>
                 <target>Frontend</target>
             </trans-unit>
+            <trans-unit id="homepage.6">
+                <source>tuliaEditor</source>
+                <target>Tulia Editor</target>
+            </trans-unit>
+            <trans-unit id="homepage.7">
+                <source>production</source>
+                <target>Na produkcji</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

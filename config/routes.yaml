@@ -9,7 +9,7 @@ homepage.localized:
         _locale: en|pl
 
 page:
-    path: /{_locale}/doc/{page}
+    path: /{_locale}/{page}.html
     controller: Tulia\Docs\Controller\PageController::page
     requirements:
         _locale: en|pl

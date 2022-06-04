@@ -24,7 +24,7 @@ final class PageController extends AbstractController
         $pagepath = "{$this->docOutputDir}/{$request->attributes->get('_locale')}/{$page}.html";
 
         if (false === file_exists($pagepath)) {
-            throw new NotFoundHttpException();
+            throw new NotFoundHttpException('Page not found.');
         }
 
         return $this->render('page.html.twig', [

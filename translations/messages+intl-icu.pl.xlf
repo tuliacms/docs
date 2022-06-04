@@ -6,6 +6,14 @@
                 <source>documentation</source>
                 <target>Dokumentacja</target>
             </trans-unit>
+            <trans-unit id="messages.2">
+                <source>goBackToSystemHomepage</source>
+                <target>Wróć do strony głównej systemu</target>
+            </trans-unit>
+            <trans-unit id="messages.3">
+                <source>goToGithubPageProject</source>
+                <target>Przejdź do strony projektu na Github</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

@@ -23,6 +23,9 @@ final class Generator
 
     public function generate(): void
     {
+        $fs = new Filesystem();
+        $fs->remove($this->projectDir.'/output');
+
         $configuration = new Configuration();
         $configuration->setCustomTemplateDirs([
             $this->projectDir . '/templates/documentation-templates'
