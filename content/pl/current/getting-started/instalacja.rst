@@ -17,14 +17,14 @@ Tulia Project Manager pozwala na zarządzanie i przełączanie się pomiędzy lo
 systemu (w sytuacji gdy lokalnie posiadasz więcej instancji), buduje i startuje kontenery
 oraz pozwala wykonywać polecenia na tych kontenerach.
 
-.. code-block:: tip
+.. tip:: Wskazówka
 
     Jeśli wykonałeś polecenie z nazwą katalogu w której instalacja ma się odbyć, pamiętaj
     by wejść do tego katalogu. Wszystkie poniższe polecenia należy wykonywać w katalogu
     w którym istnieje instancja systemu.
 
-Tworzenie lokalnej instancji systemu
-####################################
+Inicjacja projektu
+##################
 
 Aby pobrać i zainstalować Tulia CMS w wybranym katalogu, w terminalu wykonaj polecenie:
 
@@ -32,7 +32,7 @@ Aby pobrać i zainstalować Tulia CMS w wybranym katalogu, w terminalu wykonaj p
 
     $ tulia init my_new_project
 
-Polecenie to pobierze najnowszą wersję systemu i zainstaluje w katalogu `my_new_project`.
+Polecenie to pobierze najnowszą wersję systemu i zainstaluje w katalogu ``my_new_project``.
 Jeśli chcesz by zainstalował w katalogu w którym wykonujesz polecenie, pomiń ten parametr.
 
 Budowanie obrazu Docker
@@ -68,15 +68,12 @@ polecenie by zatrzymać kontenery aktualnej instancji:
 
 .. code-block:: terminal
 
-    $ tulia stopfgh
+    $ tulia stop
 
 Czytaj więcej
 #############
 
-sdfsdf
 
-See :ref: `jak-pracowac-z-wieloma-instancjami-systemu`
-:doc:`Jak pracować z wieloma instancjami systemu? <jak-pracowac-z-wieloma-instancjami-systemu>`
+- :doc:`Dowiedz się więcej o Tulia Project Manager <polecenia-i-uzycie-tulia-project-manager>`
+- :doc:`Jak pracować z wieloma instancjami systemu? <jak-pracowac-z-wieloma-instancjami-systemu>`
 
-asd
-adsasd

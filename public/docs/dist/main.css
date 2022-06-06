@@ -1,0 +1,40 @@
+/*!*************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/css/style.scss ***!
+  \*************************************************************************************************************/
+aside .list-group-flush > .list-group-item {
+  font-size: 20px;
+  margin-bottom: 6px; }
+
+aside .list-group-flush .list-group a {
+  padding: 5px 10px 5px 26px;
+  border: none;
+  color: rgba(0, 0, 0, 0.8); }
+  aside .list-group-flush .list-group a.active {
+    background-color: #eee; }
+
+.hint {
+  border: 2px solid #ddd;
+  border-radius: 0.375rem;
+  margin-bottom: 20px;
+  padding: 12px;
+  position: relative; }
+  .hint .hint-title {
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 7px; }
+    .hint .hint-title .fa-solid {
+      width: 35px;
+      height: 35px;
+      text-align: center;
+      line-height: 35px;
+      border-radius: 4px;
+      background-color: #ddd;
+      display: inline-block;
+      margin-right: 8px; }
+    .hint .hint-title span {
+      font-size: 17px; }
+  .hint p:last-of-type {
+    margin-bottom: 0; }
+
+
+/*# sourceMappingURL=main.css.map*/

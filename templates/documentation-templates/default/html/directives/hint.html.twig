@@ -1,0 +1,17 @@
+<div class="hint hint-{{ name }} {{ class }}">
+    <p class="hint-title">
+        {% if name in ['note'] %}
+            <i class="fa-solid fa-pen-to-square"></i>
+        {% elseif name in ['tip'] %}
+            <i class="fa-solid fa-lightbulb"></i>
+        {% elseif name in ['important', 'warning'] %}
+            <i class="fa-solid fa-triangle-exclamation"></i>
+        {% elseif name in ['caution', 'danger'] %}
+            <i class="fa-solid fa-circle-exclamation"></i>
+        {% elseif name in ['versionadded', 'deprecated'] %}
+            {# don't show an icon here #}
+        {% elseif name in ['seealso'] %}
+            <i class="fa-solid fa-link"></i>
+        {% endif %}
+        <span>{{ text }}</span>
+    </p>

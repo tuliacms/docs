@@ -28,14 +28,21 @@ final class Watch extends Command
     {
         $output->writeln('Start listening...');
 
+        $this->generate($output);
+
         SpatieWatcher::path($this->docSourceDir)
             ->onAnyChange(function () use ($output) {
-                $this->generator->generate();
-                $date = (new \DateTime)->format('Y-m-d H:i:s');
-                $output->writeln("[$date] Regenerated...");
+                $this->generate($output);
             })
             ->start();
 
         return Command::SUCCESS;
+    }
+
+    private function generate(OutputInterface $output): void
+    {
+        $this->generator->generate();
+        $date = (new \DateTime)->format('Y-m-d H:i:s');
+        $output->writeln("[$date] Regenerated...");
     }
 }

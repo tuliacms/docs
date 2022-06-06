@@ -11,7 +11,11 @@ restart:
 	docker-compose restart
 
 install:
-	docker exec -it --user "$(id -u):$(id -g)" --workdir="/var/www" tulia-docs_php composer install && npm i chokidar
+	docker exec -it --user "$(id -u):$(id -g)" --workdir="/var/www" \
+	tulia-docs_php composer install \
+	&& npm i chokidar \
+	&& cd public/docs \
+	&& npm install
 
 bash:
 	docker exec -it --user "$(id -u):$(id -g)" --workdir="/var/www" tulia-docs_php /bin/bash

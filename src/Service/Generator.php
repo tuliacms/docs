@@ -9,6 +9,7 @@ use Doctrine\RST\Configuration;
 use Doctrine\RST\Kernel;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Finder\Finder;
+use Tulia\Docs\Directive as Directives;
 
 /**
  * @author Adam Banaszkiewicz
@@ -32,7 +33,17 @@ final class Generator
         ]);
         $configuration->setTheme('default');
 
-        $kernel = new Kernel($configuration);
+        $kernel = new Kernel($configuration, [
+            new Directives\CautionDirective(),
+            new Directives\DangerDirective(),
+            new Directives\DeprecatedDirective(),
+            new Directives\ImportantDirective(),
+            new Directives\NoteDirective(),
+            new Directives\SeealsoDirective(),
+            new Directives\TipDirective(),
+            new Directives\VersionaddedDirective(),
+            new Directives\WarningDirective(),
+        ]);
         $builder = new Builder($kernel);
         $builder->build($this->projectDir.'/content', $this->projectDir.'/output');
 

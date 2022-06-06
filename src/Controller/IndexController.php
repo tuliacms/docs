@@ -45,6 +45,6 @@ final class IndexController extends AbstractController
 
     public function localeRedirect(): RedirectResponse
     {
-        return $this->redirectToRoute('homepage.localized', ['_locale' => 'en']);
+        return $this->redirectToRoute('homepage.localized', ['_locale' => 'pl']);
     }
 }
