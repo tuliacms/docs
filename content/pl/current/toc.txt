@@ -6,14 +6,14 @@ Podstawy systemu||fa-solid fa-book
 
 Architektura||fa-solid fa-layer-group
     architektura/typy-tresci||Typy treści
-    architektura/nodes|| Nodes(węzły treści)
+    architektura/nodes|| Nodes (węzły treści)
 
 Frontend||fa-solid fa-panorama
     frontend/szablony||Szablony
     frontend/zasoby||Zasoby (assets)
 
 Tulia Editor||fa-solid fa-brush
-    tulia-editor/podstawy||Podstawy edytora
+    tulia-editor/podstawy-edytora||Podstawy edytora
     tulia-editor/bloki||Bloki
     tulia-editor/rozszerzenia||Rozszerzenia
 
