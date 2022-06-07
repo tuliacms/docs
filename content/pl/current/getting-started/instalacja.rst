@@ -53,12 +53,15 @@ Wykonaj poniższe polecenie, aby wystartować kontenery z systemem:
 
     $ tulia start
 
-System dostępny jest domyślnie pod adresem http://localhost/. Możesz natomiast używać systemu
-pod domeną http://tulia.loc/. Aby to zrobić wykonaj polecenie:
+System dostępny jest domyślnie pod adresem http://localhost/.
 
-.. code-block:: terminal
+.. tip:: Wskazówka
+    Możesz localnie używać systemu pod domeną http://tulia.loc/. Aby to zrobić wykonaj poniższe
+    polecenie, które zainstaluje lokalnie dostęp do domeny ``tulia.loc``.
 
-    $ tulia install:hosts
+    .. code-block:: terminal
+
+        $ tulia install:hosts
 
 Zatrzymanie kontenerów
 ######################

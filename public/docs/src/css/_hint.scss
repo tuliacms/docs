@@ -8,7 +8,7 @@
     .hint-title {
         color: #000;
         font-weight: 600;
-        margin-bottom: 7px;
+        margin-bottom: $paragraph-margin-bottom;
 
         .fa-solid {
             width: 35px;
@@ -26,7 +26,7 @@
         }
     }
 
-    p:last-of-type {
+    :last-child {
         margin-bottom: 0;
     }
 }
