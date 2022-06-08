@@ -1,3 +1,6 @@
+PHPROOT = docker exec -it --user "$(id -u):$(id -g)" --workdir="/var/www" tulia-docs_php
+PHPROOTBUILD = docker exec -it --user "$(id -u):$(id -g)" --workdir="/var/www/_build" tulia-docs_php
+
 build:
 	docker-compose build --build-arg USER_ID=1000 --build-arg GROUP_ID=1000
 
@@ -11,19 +14,27 @@ restart:
 	docker-compose restart
 
 install:
-	docker exec -it --user "$(id -u):$(id -g)" --workdir="/var/www" \
-	tulia-docs_php composer install \
-	&& npm i chokidar \
-	&& cd public/docs \
-	&& npm install
+	$(PHPROOT) composer install \
+	&& $(PHPROOT) npm i chokidar \
+	&& $(PHPROOT) cd public/docs \
+	&& $(PHPROOT) npm install
 
 bash:
-	docker exec -it --user "$(id -u):$(id -g)" --workdir="/var/www" tulia-docs_php /bin/bash
+	$(PHPROOT) /bin/bash
 
 generate:
-	docker exec -it --user "$(id -u):$(id -g)" --workdir="/var/www" tulia-docs_php php bin/console docs:generate
+	$(PHPROOT) php bin/console docs:generate
 
 watch:
-	docker exec -it --user "$(id -u):$(id -g)" --workdir="/var/www" tulia-docs_php php bin/console docs:watch
+	$(PHPROOT) php bin/console docs:watch
+
+build-production:
+	$(PHPROOT) php _build.php \
+	&& $(PHPROOTBUILD) composer install --no-dev --optimize-autoloader \
+	&& $(PHPROOTBUILD) php bin/console cache:clear --env=prod -q \
+	&& echo 'Creating tulia-docs-build.zip zip package...' \
+	&& zip -rq tulia-docs-build.zip _build/ \
+	&& $(PHPROOT) rm -rf _build \
+	&& echo 'Project building complete.'
 
 .SILENT:

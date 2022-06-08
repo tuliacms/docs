@@ -10,3 +10,5 @@
 /html
 /.idea
 /node_modules
+/_build
+tulia-docs-build.zip
