@@ -20,6 +20,10 @@ final class ErrorController extends AbstractController
             return $this->render('error-page/404.html.twig');
         }
 
+        if ($this->getParameter('kernel.environment') === 'dev') {
+            throw $exception;
+        }
+
         return $this->render('error-page/500.html.twig');
     }
 }
