@@ -1,11 +1,11 @@
 {% extends 'base.html.twig' %}
 {% trans_default_domain 'homepage' %}
 
-{% block content %}
+{% blocsk content %}
     <div class="row">
         <h1>{{ 'tuliaCmsDocumentation'|trans }}</h1>
     </div>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3 homepage-sections">
         {% for section in toc %}
             <div class="col d-flex align-items-start mb-5">
                 <div class="icon-square bg-light text-dark d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">

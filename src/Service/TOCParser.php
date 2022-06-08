@@ -18,6 +18,10 @@ final class TOCParser
     {
         $tocFilepath = $this->docOutputDir.'/'.$locale.'/'.$version.'/toc.txt';
 
+        if (!is_file($tocFilepath)) {
+            return [];
+        }
+
         $lines = file($tocFilepath, FILE_IGNORE_NEW_LINES);
 
         $toc = [];

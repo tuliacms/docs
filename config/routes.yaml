@@ -6,11 +6,11 @@ homepage.localized:
     path: /{_locale}/
     controller: Tulia\Docs\Controller\IndexController::index
     requirements:
-        _locale: en|pl
+        _locale: pl
 
 page:
     path: /{_locale}/{page}.html
     controller: Tulia\Docs\Controller\PageController::page
     requirements:
-        _locale: en|pl
+        _locale: pl
         page: '.*'
