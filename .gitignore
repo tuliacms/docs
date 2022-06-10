@@ -1,14 +1,1 @@
-/.env.local
-/.env.local.php
-/.env.*.local
-/config/secrets/prod/prod.decrypt.private.php
-/public/bundles/
-/var/
-/vendor/
-/output/*
-!/output/empty.html
-/html
 /.idea
-/node_modules
-/_build
-tulia-docs-build.zip
