@@ -1,57 +1,36 @@
 Instalacja
 ==========
 
-Dowiesz się jak zainstalować system Tulia CMS lokalnie na komputerze, by móc rozpocząć pracę.
+Dowiesz się jak w kilku krokach zainstalować system Tulia CMS lokalnie, by móc rozpocząć pracę.
+Potrzebny Ci będzie:
 
-Tulia Project Manager
-#####################
+- Dostęp do terminala
+- Docker
+- Git
 
-Instalacja systemu odbywa się za pomocą Tulia Project Managera. Możesz go zainstalować lokalnie
-za pomocą polecenia:
+1. Instalacja projektu
+######################
 
-.. code-block:: terminal
-
-    $ npm i -g tulia-project-manager
-
-Tulia Project Manager pozwala na zarządzanie i przełączanie się pomiędzy lokalnymi wersjami
-systemu (w sytuacji gdy lokalnie posiadasz więcej instancji), buduje i startuje kontenery
-oraz pozwala wykonywać polecenia na tych kontenerach.
-
-.. tip:: Wskazówka
-
-    Jeśli wykonałeś polecenie z nazwą katalogu w której instalacja ma się odbyć, pamiętaj
-    by wejść do tego katalogu. Wszystkie poniższe polecenia należy wykonywać w katalogu
-    w którym istnieje instancja systemu.
-
-Inicjacja projektu
-##################
-
-Aby pobrać i zainstalować Tulia CMS w wybranym katalogu, w terminalu wykonaj polecenie:
+Zainstaluj projekt w wybranym katalogu, za pomocą Composera:
 
 .. code-block:: terminal
 
-    $ tulia init my_new_project
+    $ git clone --depth=1 https://github.com/tuliacms/tuliacms.git my_project_name && rm ./.git -rf
+    $ cd my_project_name
 
-Polecenie to pobierze najnowszą wersję systemu i zainstaluje w katalogu ``my_new_project``.
-Jeśli chcesz by zainstalował w katalogu w którym wykonujesz polecenie, pomiń ten parametr.
+System zostanie sklonowany i umieszczony w katalogu ``my_project_name``.
 
-Budowanie obrazu Docker
+2. Konfiguracja systemu
 #######################
 
-Aby zbudować obrazy kontenerów Docker, wykonaj następujące polecenie:
+Gdy wszystko jest zainstalwoane, pozostaje już tylko konfiguracja systemu. Wykonaj poniższe polecenie
+i odpowiedz na pytania, które umożliwią Ci wstępne skonfigurowanie i uruchomienie systemu.
 
 .. code-block:: terminal
 
-    $ tulia build
+    $ make setup
 
-Uruchomienie kontenerów/systemu
-###############################
-
-Wykonaj poniższe polecenie, aby wystartować kontenery z systemem:
-
-.. code-block:: terminal
-
-    $ tulia start
+########################
 
 System dostępny jest domyślnie pod adresem http://localhost/.
 
@@ -61,7 +40,7 @@ System dostępny jest domyślnie pod adresem http://localhost/.
 
     .. code-block:: terminal
 
-        $ tulia install:hosts
+        $ make install-hosts
 
 Zatrzymanie kontenerów
 ######################
@@ -71,12 +50,10 @@ polecenie by zatrzymać kontenery aktualnej instancji:
 
 .. code-block:: terminal
 
-    $ tulia stop
+    $ make down
 
 Czytaj więcej
 #############
 
-
-- :doc:`Dowiedz się więcej o Tulia Project Manager <polecenia-i-uzycie-tulia-project-manager>`
-- :doc:`Jak pracować z wieloma instancjami systemu? <jak-pracowac-z-wieloma-instancjami-systemu>`
+- :doc:`Wszystkie polecenia make <lista-polecen-make>`
 

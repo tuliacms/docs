@@ -20,3 +20,6 @@ Tulia Editor||fa-solid fa-brush
 Na produkcji||fa-solid fa-cloud
     na-produkcji/deployment||Deployment
     na-produkcji/wydajnosc||Wydajność
+
+Moduły||fa-solid fa-box-open
+    moduly/import-export||Import/Export
