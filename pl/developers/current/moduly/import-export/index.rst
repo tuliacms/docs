@@ -1,7 +1,7 @@
 Import/Export
 ============
 
-Importer wykorzystywany jest do uzupełniania systemu przykłądowymi danymi, na przykład podczas
+Importer wykorzystywany jest do uzupełniania systemu przykładowymi danymi, na przykład podczas
 instalacji szablonu lub pierwszego uruchomienia strony. Importer działa na plikach w formacie JSON.
 Każdy plik zawiera obiekty do importu. Obiekty posiadają swój schemat (Schema) w konfiguracji modułu,
 oraz osobne importery, które odpowiedzialne są za właściwe zapisanie obiektu z importowanego pliku,
@@ -75,16 +75,16 @@ widoczność na stronie. Zróbmy więc konfigurację takiego obiektu.
 
 .. code-block:: yaml
     cms:
-    importer:
-        objects:
-            Product:
-                mapping:
-                    name: ~
-                    description:
-                        required: false
-                    visible:
-                        type: boolean
-                        default_value: true
+        importer:
+            objects:
+                Product:
+                    mapping:
+                        name: ~
+                        description:
+                            required: false
+                        visible:
+                            type: boolean
+                            default_value: true
 
 W naszym przypadku opis nie jest wymagany. Domyślnie jednak każde pole jest wymagane więc musimy
 ręcznie zmienić wymagalność. Posiadamy widoczność, ale nie chcemy by za każdym razem trzeba było ją
@@ -187,4 +187,5 @@ Czytaj więcej
 
 - :doc:`Zależności pomiędzy obiektami <zaleznosci-pomiedzy-obiektami>`
 - :doc:`Import wielojęzycznych obiektów <import-wielojezycznych-obiektow>`
+- :doc:`Import obiektów zależnych od autora <import-obiektow-zaleznych-od-autora>`
 - :doc:`Lista dostępnych obiektów do importu <lista-dostepnych-obiektow-do-importu>`
