@@ -4,7 +4,9 @@ return [
     'sections' => [
         ['label' => 'Getting started', 'icon' => 'fa-solid fa-book-open', 'links' => [
             ['link' => 'getting-started/wprowadzenie', 'label' => 'Wprowadzenie'],
-            ['link' => 'getting-started/instalacja', 'label' => 'Instalacja systemu'],
+            ['link' => 'getting-started/instalacja', 'label' => 'Instalacja systemu', 'links' => [
+                ['link' => 'getting-started/lista-polecen-make', 'label' => 'Lista poleceń make'],
+            ]],
         ]],
         /*['label' => 'Architektura', 'icon' => 'fa-solid fa-layer-group', 'links' => [
             ['link' => 'architektura/backend-fontend', 'label' => 'Backend/Frontend'],
@@ -16,9 +18,19 @@ return [
             ['link' => 'architektura/nodes', 'label' => 'Nodes (wpisy)'],
         ]],*/
         ['label' => 'Frontend', 'icon' => 'fa-solid fa-panorama', 'links' => [
-            ['link' => 'frontend/motywy', 'label' => 'Motywy'],
-            //['link' => 'frontend/zasoby', 'label' => 'Zasoby (assets)'],
-           // ['link' => 'architektura/hooks', 'label' => 'Hooks'],
+            ['link' => 'frontend/motywy/index', 'label' => 'Motywy', 'links' => [
+                ['link' => 'frontend/motywy/glowny-widok-motywu', 'label' => 'Główny widok motywu'],
+                ['link' => 'frontend/motywy/widoki-motywu', 'label' => 'Widoki motywu'],
+                ['link' => 'frontend/motywy/nadpisywanie-widokow', 'label' => 'Nadpisywanie widoków'],
+                ['link' => 'frontend/motywy/customizer', 'label' => 'Customizer', 'links' => [
+                    ['link' => 'frontend/motywy/zmienne-css', 'label' => 'Zmienne CSS'],
+                    ['link' => 'frontend/motywy/gotowe-konfiguracje-customizera', 'label' => 'Gotowe konfiguracje'],
+                ]],
+                ['link' => 'frontend/motywy/dziedziczenie-motywow', 'label' => 'Dziedziczenie motywów'],
+                ['link' => 'frontend/motywy/strony-bledow', 'label' => 'Strony błędów'],
+                ['link' => 'frontend/motywy/funkcje-widokow-twig', 'label' => 'Lista funkcji widoków'],
+            ]],
+            //['link' => 'frontend/motywy/zasoby', 'label' => 'Zasoby (assets)'],
         ]],
         /*['label' => 'Tulia Editor', 'icon' => 'fa-solid fa-brush', 'links' => [
             ['link' => 'tulia-editor/podstawy-edytora', 'label' => 'Podstawy edytora'],
