@@ -31,6 +31,25 @@ return [
                 ['link' => 'frontend/motywy/funkcje-widokow-twig', 'label' => 'Lista funkcji widoków'],
             ]],
             //['link' => 'frontend/motywy/zasoby', 'label' => 'Zasoby (assets)'],
+            ['link' => 'frontend/tulia-editor/index', 'label' => 'Tulia Editor', 'links' => [
+                ['link' => 'frontend/tulia-editor/index', 'label' => 'Podstawy edytora'],
+                ['link' => 'frontend/tulia-editor/bloki-tresci', 'label' => 'Bloki', 'links' => [
+                    ['link' => 'frontend/tulia-editor/bloki/rozszerzenia/index', 'label' => 'Rozszerzenia', 'links' => [
+                        ['link' => 'frontend/tulia-editor/bloki/rozszerzenia/contenteditable', 'label' => 'Contenteditable'],
+                        ['link' => 'frontend/tulia-editor/bloki/rozszerzenia/wysiwyg-editor', 'label' => 'WysiwygEditor'],
+                        ['link' => 'frontend/tulia-editor/bloki/rozszerzenia/image', 'label' => 'Image'],
+                        ['link' => 'frontend/tulia-editor/bloki/rozszerzenia/background-image', 'label' => 'BackgroundImage'],
+                        ['link' => 'frontend/tulia-editor/bloki/rozszerzenia/font-icon', 'label' => 'FontIcon'],
+                        ['link' => 'frontend/tulia-editor/bloki/rozszerzenia/collection', 'label' => 'Collection'],
+                    ]],
+                    /*['link' => 'frontend/tulia-editor/bloki/kontrolki/index', 'label' => 'Kontrolki', 'links' => [
+                        ['link' => 'frontend/tulia-editor/bloki/kontrolki/input-text', 'label' => 'Input.Text'],
+                        ['link' => 'frontend/tulia-editor/bloki/kontrolki/input-range', 'label' => 'Input.Range'],
+                        ['link' => 'frontend/tulia-editor/bloki/kontrolki/select', 'label' => 'Select'],
+                    ]],*/
+                ]],
+                /*['link' => 'frontend/tulia-editor/rozszerzenia', 'label' => 'Rozszerzenia'],*/
+            ]],
         ]],
         /*['label' => 'Tulia Editor', 'icon' => 'fa-solid fa-brush', 'links' => [
             ['link' => 'tulia-editor/podstawy-edytora', 'label' => 'Podstawy edytora'],
@@ -38,7 +57,13 @@ return [
             ['link' => 'tulia-editor/rozszerzenia', 'label' => 'Rozszerzenia'],
         ]],*/
         ['label' => 'Moduły', 'icon' => 'fa-solid fa-box-open', 'links' => [
-            ['link' => 'moduly/import-export', 'label' => 'Import/Export'],
+            ['link' => 'moduly/import-export', 'label' => 'Import/Export', 'links' => [
+                ['link' => 'moduly/import-export/zaleznosci-pomiedzy-obiektami', 'label' => 'Zależności pomiędzy obiektami'],
+                ['link' => 'moduly/import-export/import-wielojezycznych-obiektow', 'label' => 'Import wielojęzycznych obiektów'],
+                ['link' => 'moduly/import-export/import-obiektow-zaleznych-od-autora', 'label' => 'Import obiektów zależnych od autora'],
+                ['link' => 'moduly/import-export/lista-dostepnych-obiektow-do-importu', 'label' => 'Lista dostępnych obiektów do importu'],
+                ['link' => 'moduly/import-export/import-plikow', 'label' => 'Import plików'],
+            ]],
             //['link' => 'moduly/options', 'label' => 'Options'],
         ]],
         ['label' => 'Na produkcji', 'icon' => 'fa-solid fa-cloud', 'links' => [

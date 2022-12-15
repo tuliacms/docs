@@ -189,3 +189,4 @@ Czytaj więcej
 - :doc:`Import wielojęzycznych obiektów <import-wielojezycznych-obiektow>`
 - :doc:`Import obiektów zależnych od autora <import-obiektow-zaleznych-od-autora>`
 - :doc:`Lista dostępnych obiektów do importu <lista-dostepnych-obiektow-do-importu>`
+- :doc:`Import plików <import-plikow>`
