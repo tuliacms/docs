@@ -30,9 +30,9 @@ We invite You to `https://github.com/tuliacms/cms <https://github.com/tuliacms/c
             <h3 class="mb-5">What You want to do:</h3>
         </div>
         <div class="col-6 text-center">
-            <a href="../frontend/motywy/index.html" class="megalink">I want to create Theme</a>
+            <a href="../frontend/themes/index.html" class="megalink">I want to create a Theme</a>
         </div>
-        <!--<div class="col-6 text-center">
-            <a href="../frontend/motywy/index.html" class="megalink">I want to create Module</a>
-        </div>-->
+        <div class="col-6 text-center">
+            <a href="../frontend/themes/index.html" class="megalink">I want to create a Module</a>
+        </div>
     </div>

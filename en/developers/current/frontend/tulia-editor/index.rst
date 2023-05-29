@@ -9,13 +9,13 @@ can be used to prepare the content of the website. Each block is edited live, wh
 actually see what the page with the given blocks will look like, and you can replace the texts or photos
 on the fly.
 
-.. image:: /resources/docs-assets/pl/developers/current/frontend/tulia-editor/tulia-editor-lead.png
+.. image:: /resources/docs-assets/en/developers/current/frontend/tulia-editor/tulia-editor-lead.png
   :width: 100%
   :alt: Tulia Editor preview screenshot
 
 .. _frontend-tulia-editor-blocks:
 Blocks
-#####
+######
 
 Tulia Editor is based on blocks prepared in each theme. Each of them is styled and ready to use on the site.
 

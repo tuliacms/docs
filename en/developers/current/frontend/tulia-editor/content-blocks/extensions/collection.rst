@@ -14,20 +14,26 @@ defined list of values, as in the example, but it must be a unique ID within a g
     // MyBlock.js
     export default {
         //...
-        defaults: {
-            faq: [
-                {
-                    id: '1',
-                    question: 'Will You marry me?',
-                    answer: 'Yes, I do!',
+        store: {
+            data: {
+                state: () => {
+                    return {
+                        faq: [
+                            {
+                                id: '1',
+                                question: 'Will You marry me?',
+                                answer: 'Yes, I do!',
+                            },
+                            {
+                                id: '2',
+                                question: 'When?',
+                                answer: 'Today!',
+                            },
+                        ],
+                    };
                 },
-                {
-                    id: '2',
-                    question: 'When?',
-                    answer: 'Today!',
-                },
-            ],
-        }
+            },
+        },
     };
 
 
@@ -58,18 +64,19 @@ Example of use
     <script setup>
         const { defineProps, inject } = require('vue');
         const props = defineProps(['block']);
-        const block = inject('blocks.instance').editor(props);
+        const block = inject('structure').block(props.block);
+        const extensions = inject('extensions.registry');
 
         // We get the extension from block instance
-        const Collection = block.extension('Collection');
+        const Collection = extensions.editor('Collection');
 
         // We get the controls for collection
-        const Actions = block.extension('Collection.Actions');
+        const Actions = extensions.editor('Collection.Actions');
 
         // We have to create collection manager for edition purposes
         // First add the current collection, and second add the default element (without ID!) that
         // will be added automatically when user clicks od the action "Add new"
-        const faq = new Collection(block.data.faq, {
+        const faq = new Collection(block, 'faq', {
             question: 'Will You marry me?',
             answer: 'Yes, I do!',
         });

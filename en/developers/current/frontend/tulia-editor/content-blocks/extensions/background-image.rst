@@ -7,20 +7,24 @@ This extension needs a specific model format to work. The model should be an obj
 
 - ``filename`` - File name
 - ``id`` - ID of the file
-- ``size`` - image size
 
 .. code-block:: js
 
     // MyBlock.js
     export default {
         //...
-        defaults: {
-            image: {
-                id: null,
-                filename: null,
-                size: 'size-name', // 'original' to show original image
+        store: {
+            data: {
+                state: () => {
+                    return {
+                        image: {
+                            id: null,
+                            filename: null,
+                        },
+                    };
+                },
             },
-        }
+        },
     };
 
 Example of use
@@ -37,10 +41,10 @@ Example of use
     <script setup>
         const { defineProps, inject } = require('vue');
         const props = defineProps(['block']);
-        const block = inject('blocks.instance').editor(props);
+        const block = inject('structure').block(props.block);
+        const extensions = inject('extensions.registry');
 
-        // We get the extension from block instance
-        const BackgroundImage = block.extension('BackgroundImage');
+        const BackgroundImage = extensions.editor('BackgroundImage');
     </script>
 
 **``Render.vue``**
@@ -48,22 +52,17 @@ Example of use
 .. code-block:: vue
 
     <template>
-        <div class="block-image d-none d-md-block" :id="background.id"></div>
+        <div class="block-image d-none d-md-block" :style="{ backgroundImage: background.backgroundImage }"></div>
     </template>
 
     <script setup>
         const { defineProps, inject } = require('vue');
         const props = defineProps(['block']);
-        const block = inject('blocks.instance').editor(props);
+        const block = inject('structure').block(props.block);
+        const extensions = inject('extensions.registry');
 
-        // We get the extension from block instance
-        const BackgroundImage = block.extension('BackgroundImage');
-        // We create image instance to use as element ID in Document
+        const BackgroundImage = extensions.editor('BackgroundImage');
         const background = new BackgroundImage(block, () => block.data.image);
     </script>
 
-The rendered HTML contains a ``<div>`` with a unique ID within the document, which is given
-a CSS-style ID ``background-image``. The rest of the styling (``background-size`` etc.) you give as needed.
-
-Note that the ``class`` attribute works on the element. The created ``<div>`` element will
-have a list of classes that you give to ``<BackgroundImage>``.
+The `backgroundImage` property returns a `url('...')` CSS value.

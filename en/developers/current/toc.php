@@ -3,8 +3,8 @@
 return [
     'sections' => [
         ['label' => 'Getting started', 'icon' => 'fa-solid fa-book-open', 'links' => [
-            ['link' => 'getting-started/introduction', 'label' => 'Intruction'],
-            ['link' => 'getting-started/installation', 'label' => 'Instalaltion', 'links' => [
+            ['link' => 'getting-started/introduction', 'label' => 'Introduction'],
+            ['link' => 'getting-started/installation', 'label' => 'Installation', 'links' => [
                 ['link' => 'getting-started/makefile-commands', 'label' => 'Makefile commands'],
             ]],
         ]],
@@ -58,6 +58,7 @@ return [
             ['link' => 'tulia-editor/rozszerzenia', 'label' => 'Rozszerzenia'],
         ]],*/
         ['label' => 'Modules', 'icon' => 'fa-solid fa-box-open', 'links' => [
+            ['link' => 'modules/developing', 'label' => 'Developing modules'],
             ['link' => 'modules/import-export', 'label' => 'Import/Export', 'links' => [
                 ['link' => 'modules/import-export/relations-between-objects', 'label' => 'Relations between objects'],
                 ['link' => 'modules/import-export/import-of-multilingual-objects', 'label' => 'Import of multilingual objects'],
@@ -70,6 +71,9 @@ return [
         ['label' => 'On production', 'icon' => 'fa-solid fa-cloud', 'links' => [
             ['link' => 'on-production/deployment', 'label' => 'Deployment'],
             //['link' => 'na-produkcji/wydajnosc', 'label' => 'Wydajność'],
+        ]],
+        ['label' => 'References', 'icon' => 'fa-solid fa-cloud', 'links' => [
+            ['link' => 'reference/extension/manifest-file', 'label' => 'Extension manifest file'],
         ]],
     ]
 ];

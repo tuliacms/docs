@@ -16,13 +16,18 @@ This extension needs a specific model format to work. The model should be an obj
     // MyBlock.js
     export default {
         //...
-        defaults: {
-            image: {
-                id: null,
-                filename: null,
-                size: 'thumbnail', // 'original' to show original image
+        store: {
+            data: {
+                state: () => {
+                    return {
+                        image: {
+                            id: null,
+                            filename: null,
+                        },
+                    };
+                },
             },
-        }
+        },
     };
 
 Example of use
@@ -33,16 +38,21 @@ Example of use
 .. code-block:: vue
 
     <template>
-        <Image v-model="block.data.image"></Image>
+        <ImageEditor
+            @updated="$emit('updated')"
+            v-model="block.data.image"
+            size="original"
+            :holder="block.id"
+        ></ImageEditor>
     </template>
 
     <script setup>
         const { defineProps, inject } = require('vue');
         const props = defineProps(['block']);
-        const block = inject('blocks.instance').editor(props);
+        const block = inject('structure').block(props.block);
+        const extensions = inject('extensions.registry');
 
-        // We get the extension from block instance
-        const Image = block.extension('Image');
+        const Image = extensions.editor('Image');
     </script>
 
 **``Render.vue``**
@@ -50,16 +60,16 @@ Example of use
 .. code-block:: vue
 
     <template>
-        <Image v-model="block.data.image"></Image>
+        <Image v-model="block.data.image" size="original"></Image>
     </template>
 
     <script setup>
         const { defineProps, inject } = require('vue');
         const props = defineProps(['block']);
-        const block = inject('blocks.instance').editor(props);
+        const block = inject('structure').block(props.block);
+        const extensions = inject('extensions.registry');
 
-        // We get the extension from block instance
-        const Image = block.extension('Image');
+        const Image = extensions.render('Image');
     </script>
 
 
@@ -77,18 +87,23 @@ Below is an example of such a separation:
     // MyBlock.js
     export default {
         //...
-        defaults: {
-            images: [
-                {
-                    id: '1', // ID used for Collection
-                    file: {
-                        id: null, // ID used for Image
-                        filename: null,
-                        size: 'thumbnail',
-                    }
-                }
-            ],
-        }
+        store: {
+            data: {
+                state: () => {
+                    return {
+                        images: [
+                            {
+                                id: '1', // ID used for Collection
+                                file: {
+                                    id: null, // ID used for Image
+                                    filename: null,
+                                }
+                            }
+                        ],
+                    };
+                },
+            },
+        },
     };
 
 **``Editor.vue``**

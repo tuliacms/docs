@@ -20,10 +20,10 @@ Example of use
     <script setup>
         const { defineProps, inject } = require('vue');
         const props = defineProps(['block']);
-        const block = inject('blocks.instance').editor(props);
+        const block = inject('structure').block(props.block);
+        const extensions = inject('extensions.registry');
 
-        // We get the extension from block instance
-        const FontIcon = block.extension('FontIcon');
+        const FontIcon = extensions.editor('FontIcon');
     </script>
 
 **``Render.vue``**
@@ -31,7 +31,7 @@ Example of use
 .. code-block:: vue
 
     <template>
-        <span :class="block.data.btn.icon"></span>
+        <span :class="block.data.icon"></span>
     </template>
 
 It is enough to display the value from the block property in the ``class`` attribute of the element

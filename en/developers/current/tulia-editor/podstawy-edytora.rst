@@ -1,2 +1,0 @@
-Podstawy edytora
-================

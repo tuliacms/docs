@@ -17,8 +17,8 @@ Example of use:
     <script setup>
         const { defineProps, inject } = require('vue');
         const props = defineProps(['block']);
-        const block = inject('blocks.instance').editor(props);
+        const block = inject('structure').block(props.block);
+        const extensions = inject('extensions.registry');
 
-        // We get the extension from block instance
-        const WysiwygEditor = block.extension('WysiwygEditor');
+        const WysiwygEditor = extensions.editor('WysiwygEditor');
     </script>

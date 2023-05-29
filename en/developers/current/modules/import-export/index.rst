@@ -59,10 +59,10 @@ should be in the ``items`` field. An example of such nesting looks like this.
         ]
     }
 
-.. tip:: Warning
+.. warning:: Warning
     Note that child elements also have a ``@type`` field. Each element, whether it is the main object
-or a subordinate object at any level, must have information about its type. This is required by the
-Schema Validator.
+    or a subordinate object at any level, must have information about its type. This is required by the
+    Schema Validator.
 
 Object schema configuration
 ------------------------------
